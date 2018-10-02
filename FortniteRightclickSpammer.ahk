@@ -30,7 +30,6 @@ if GetKeyState("RButton", "P")
 {
 SendInput {RButton DownTemp}
 Sleep 30 // high = slow , Low = fast
-mouseXY(0, 5) // high = stong , low = weak
 SendInput {RButton Up}
 Sleep 20 // high = slow , Low = fast
 }
@@ -40,9 +39,5 @@ break
 } ;; if
 } ;; autofire()
 
-mouseXY(x,y)
-{
-DllCall("mouse_event",uint,1,int,x,int,y,uint,0,int,0)
-}
 
 o::Suspend
