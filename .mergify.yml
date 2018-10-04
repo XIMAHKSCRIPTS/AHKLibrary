@@ -1,13 +1,11 @@
 rules:
-  default:
-    protection: 0
-      required_status_checks: 0
-        contexts:
-          - continuous-integration/travis-ci
-      required_pull_request_reviews:
-        required_approving_review_count: 0
+  protection:
+    required_status_checks:
+      contexts:
+        - continuous-integration/travis-ci
+    required_pull_request_reviews:
+      required_approving_review_count: 2
   branches:
-    protection: 0 
-      stable/.*:
-        required_pull_request_reviews: 0
-          required_approving_review_count: 0
+    protection:
+      auto-deployment:
+        required_pull_request_reviews: null
